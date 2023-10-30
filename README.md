@@ -21,16 +21,16 @@
 
 ## Overview
 
-LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by 
+LitmusChaos is an open-source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by 
 inducing chaos tests in a controlled way. Developers & SREs can practice Chaos Engineering with LitmusChaos as it is easy to use, based on modern 
 Chaos Engineering principles & community collaborated. It is 100% open source & a CNCF project.
 
-LitmusChaos takes a cloud-native approach to create, manage and monitor chaos. The platform itself runs as a set of microservices and uses Kubernetes 
-custom resources (CRs) to define the chaos intent, as well as the steady state hypothesis. 
+LitmusChaos takes a cloud-native approach to create, manage, and monitor chaos. The platform itself runs as a set of microservices and uses Kubernetes 
+custom resources (CRs) to define the chaos intent, as well as the steady-state hypothesis. 
 
-At a high-level, Litmus comprises of:  
+At a high level, Litmus comprises of:  
 
-- **Chaos Control Plane**: A centralized chaos management tool called chaos-center, which helps construct, schedule and visualize Litmus chaos workflows  
+- **Chaos Control Plane**: A centralized chaos management tool called chaos-center, which helps construct, schedule, and visualize Litmus chaos workflows  
 - **Chaos Execution Plane Services**: Made up of a chaos agent and multiple operators that execute & monitor the experiment within a defined 
   target Kubernetes environment. 
 
@@ -41,14 +41,14 @@ At the heart of the platform are the following chaos custom resources:
 - **ChaosExperiment**: A resource to group the configuration parameters of a particular fault. ChaosExperiment CRs are essentially installable templates 
   that describe the library carrying out the fault, indicate permissions needed to run it & the defaults it will operate with. Through the ChaosExperiment,  Litmus supports BYOC (bring-your-own-chaos) that helps integrate (optional) any third-party tooling to perform the fault injection. 
 
-- **ChaosEngine**: A resource to link a Kubernetes application workload/service, node or an infra component to a fault described by the ChaosExperiment. 
+- **ChaosEngine**: A resource to link a Kubernetes application workload/service, node, or an infra component to a fault described by the ChaosExperiment. 
   It also provides options to tune the run properties and specify the steady state validation constraints using 'probes'. ChaosEngine is watched by the 
   Chaos-Operator, which reconciles it (triggers experiment execution) via runners. 
 
 The ChaosExperiment & ChaosEngine CRs are embedded within a Workflow object that can string together one or more experiments in a desired order.
 
 - **ChaosResult**: A resource to hold the results of the experiment run. It provides details of the success of each validation constraint, 
-  the revert/rollback status of the fault as well as a verdict. The Chaos-exporter reads the results and exposes information as prometheus metrics. 
+  the revert/rollback status of the fault as well as a verdict. The Chaos-exporter reads the results and exposes information as Prometheus metrics. 
   ChaosResults are especially useful during automated runs. 
 
 ChaosExperiment CRs are hosted on <a href="https://hub.litmuschaos.io" target="_blank">hub.litmuschaos.io</a>. It is a central hub where the 
@@ -77,7 +77,7 @@ Check out the <a href="https://github.com/litmuschaos/community-charts/blob/mast
 
 ### Community Resources:
 
-Feel free to reach out if you have any queries,concerns, or feature requests
+Feel free to reach out if you have any queries, concerns, or feature requests
 
 - Give us a star ⭐️ - If you are using LitmusChaos or think it is an interesting project, we would love a star ❤️
 
@@ -87,7 +87,7 @@ Feel free to reach out if you have any queries,concerns, or feature requests
 
 - To join our [Slack Community](https://slack.litmuschaos.io/) and meet our community members, put forward your questions & opinions, join the #litmus channel on the [Kubernetes Slack](https://slack.k8s.io/). 
 ### Community Meetings
-The Litmus community meets on the third wednesday of every month at 10:00PM IST/6:30 PM CEST/9:30 AM PST.
+The Litmus community meets on the third Wednesday of every month at 10:00 PM IST/6:30 PM CEST/9:30 AM PST.
 
 - [Sync Up Meeting Link](https://harness-io.zoom.us/j/95100368978?pwd=b2VrdCtaakE5U3dhOElFMUJOaXVOUT09)
 - [Sync Up Agenda & Meeting Notes](https://hackmd.io/a4Zu_sH4TZGeih-xCimi3Q)
